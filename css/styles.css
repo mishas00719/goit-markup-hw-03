@@ -2,7 +2,6 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-color-slate, #434455);
   background-color: var(--background-color-white);
-  text-decoration: none;
 }
 
 :root {
