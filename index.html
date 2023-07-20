@@ -20,28 +20,34 @@
       rel="stylesheet"
     />
   </head>
-  <body class="main-page">
+  <body>
     <header class="header">
       <div class="container">
-        <nav>
+        <nav class="page-nav">
           <a class="link logo" href="./index.html"
             >Web<span class="logo-studio">Studio</span></a
           >
-          <ul class="list">
-            <li><a class="nav link" href="./index.html">Studio</a></li>
-            <li><a class="nav link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="nav link" href="">Contacts</a></li>
+          <ul class="nav-list list">
+            <li class="nav-item">
+              <a class="nav_link link" href="./index.html">Studio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_link link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav_link link" href="">Contacts</a>
+            </li>
           </ul>
         </nav>
-        <address class="contacts">
-          <ul class="list">
-            <li>
-              <a class="link mail" href="mailto:info@devstudio.com"
+        <address class="page-address">
+          <ul class="address-list list">
+            <li class="address_item">
+              <a class="address_link link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               ><br />
             </li>
-            <li>
-              <a class="link tel" href="tel:+110001111111"
+            <li class="address_item">
+              <a class="address_link link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -51,41 +57,41 @@
     </header>
 
     <main>
-      <section class="section-nero section">
+      <section class="nero">
         <div class="container">
-          <h1 class="page-title">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <h1 class="nero-header">Effective Solutions for Your Business</h1>
+          <button type="button" class="hero-button">Order Service</button>
         </div>
       </section>
 
-      <section class="section-offer section">
+      <section class="advantages-section">
         <div class="container">
           <h2 class="visually-hidden">Our offer</h2>
-          <ul class="list">
-            <li>
-              <h3 class="title">Strategy</h3>
-              <p class="title-text">
+          <ul class="card-set list">
+            <li class="card">
+              <h3 class="card_title">Strategy</h3>
+              <p class="card_subtitle">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
             </li>
-            <li>
-              <h3 class="title">Punctuality</h3>
-              <p class="title-text">
+            <li class="card">
+              <h3 class="card_title">Punctuality</h3>
+              <p class="card_subtitle">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
             </li>
-            <li>
-              <h3 class="title">Diligence</h3>
-              <p class="title-text">
+            <li class="card">
+              <h3 class="card_title">Diligence</h3>
+              <p class="card_subtitle">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li>
-              <h3 class="title">Technologies</h3>
-              <p class="title-text">
+            <li class="card">
+              <h3 class="card_title">Technologies</h3>
+              <p class="card_subtitle">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -94,61 +100,75 @@
         </div>
       </section>
 
-      <section class="section-doing section">
+      <section class="section-doing">
         <div class="container">
-          <h2 class="section-title">What are we doing</h2>
-          <ul class="list">
-            <li><img src="./images/img1.jpg" alt="Service_1" width="360" /></li>
-            <li><img src="./images/img2.jpg" alt="Service_2" width="360" /></li>
-            <li><img src="./images/img3.jpg" alt="Service_3" width="360" /></li>
+          <h2 class="section-header">What are we doing</h2>
+          <ul class="card-set">
+            <li class="card">
+              <img src="./images/img1.jpg" alt="Service_1" width="360" />
+            </li>
+            <li class="card">
+              <img src="./images/img2.jpg" alt="Service_2" width="360" />
+            </li>
+            <li class="card">
+              <img src="./images/img3.jpg" alt="Service_3" width="360" />
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="section-title-team section">
+      <section class="team section">
         <div class="container">
-          <h2 class="title-team">Our Team</h2>
-          <ul class="list">
-            <li class="section-team-item">
+          <h2 class="section-header">Our Team</h2>
+          <ul class="card-set">
+            <li class="card">
               <img
                 src="./images/TeamCard1.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
               />
-              <h3 class="title">Mark Guerrero</h3>
-              <p class="title-text">Product Designer</p>
+              <div class="card-text">
+                <h3 class="card_title">Mark Guerrero</h3>
+                <p class="card_subtitle">Product Designer</p>
+              </div>
             </li>
-            <li class="section-team-item">
+            <li class="card">
               <img
                 src="./images/TeamCard2.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
               />
-              <h3 class="title">Tom Ford</h3>
-              <p class="title-text">Frontend Developer</p>
+              <div class="card-text">
+                <h3 class="card_title">Tom Ford</h3>
+                <p class="card_subtitle">Frontend Developer</p>
+              </div>
             </li>
 
-            <li class="section-team-item">
+            <li class="card">
               <img
                 src="./images/TeamCard3.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
               />
-              <h3 class="title">Camila Garcia</h3>
-              <p class="title-text">Marketing</p>
+              <div class="card-text">
+                <h3 class="card_title">Camila Garcia</h3>
+                <p class="card_subtitle">Marketing</p>
+              </div>
             </li>
-            <li class="section-team-item">
+            <li class="card">
               <img
                 src="./images/TeamCard4.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
               />
-              <h3 class="title">Daniel Wilson</h3>
-              <p class="title-text">UI Designer</p>
+              <div class="card-text">
+                <h3 class="card_title">Daniel Wilson</h3>
+                <p class="card_subtitle">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -157,10 +177,10 @@
 
     <footer class="footer">
       <div class="container">
-        <a class="link" href="./index.html"
-          >Web<span class="logo-studio-footer">Studio</span></a
+        <a href="./index.html" class="logo link"
+          >Web<span class="logo_span">Studio</span></a
         >
-        <p class="title-text">
+        <p class="footer-text">
           Increase the flow of customers and sales for your business with
           digital marketing & growth solutions.
         </p>
