@@ -4,7 +4,7 @@ body {
   background-color: var(--background-color-white);
 }
 
-*/---------commit--------------*/ :root {
+:root {
   --primary-font: "Roboto" sans-serif;
   --primary-color-slate: #434455;
   --background-color-white: #ffffff;
