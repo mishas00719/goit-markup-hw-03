@@ -195,6 +195,7 @@ img {
 }
 .advantages-section {
   padding: 120px 0;
+  display: flex;
 }
 .advantages-section .card-set {
   display: flex;
@@ -239,16 +240,16 @@ padding: 0;
   text-align: center;
   margin-bottom: 72px;
 }
-.doing-section {
+.section-doing {
   padding-bottom: 120px;
 }
 
-.doing-section .card-set {
+.section-doing .card-set {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
-.doing-section .card {
+.section-doing .card {
   width: calc((100% - 2 * 24px) / 3);
 }
 
