@@ -271,7 +271,7 @@ padding: 0;
   align-items: center;
 }
 .team-section .card-text {
-  padding: 32px 16px;
+  padding: 32px 0px;
 }
 .team-section .card_title {
   margin-bottom: 8px;
