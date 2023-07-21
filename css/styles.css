@@ -8,15 +8,15 @@ body {
 }
 
 :root {
-  --primary-font: "Roboto" sans-serif;
-  --primary-color-slate: #434455;
-  --background-color-white: #ffffff;
-  --primary-text-color: #2e2f42;
-  --active-text-color: #404bbf;
-  --color-logo: #4d5ae5;
-  --backgroung-color-onesect: #2e2f42;
-  --color-text-onesect: #ffffff;
-  --color-text-footer: #f4f4fd;
+  --whitebackground: #ffffff;
+  --herobackground: #2e2f42;
+  --footerbackground: #2e2f42;
+  --primarycolor: #2e2f42;
+  --textcolor: #434455;
+  --textfooter: #f4f4fd
+  --whitetext: #ffffff;
+  --logofont: "Raleway", sans-serif;
+  --primaryfont: "Roboto", sans-serif;
 }
 
 button {
