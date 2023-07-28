@@ -426,6 +426,7 @@ img {
 .filter-button:hover,
 .filter-button:focus {
   border: 1px solid transparent;
+  background: #404bbf;
 }
 .filter-list {
   display: flex;
