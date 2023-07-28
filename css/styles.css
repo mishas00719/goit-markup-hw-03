@@ -52,6 +52,10 @@ address {
 img {
   display: block;
 }
+.icon {
+  fill: currentColor;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -95,6 +99,8 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header .container {
   display: flex;
@@ -109,6 +115,7 @@ img {
   margin: auto;
   gap: 40px;
   margin-right: auto;
+  position: relative;
 }
 .nav_item {
   margin-right: auto;
@@ -119,11 +126,27 @@ img {
   letter-spacing: 0.02em;
   line-height: 1.5;
   padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
-.nav_link:hover,
-.nav_link:active,
-.nav_link:focus {
+
+.current {
   color: #404bbf;
+}
+.current::after {
+  margin-top: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  content: "";
+  width: 48px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .page-address {
@@ -141,6 +164,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address_link:hover,
 .address_link:active,
@@ -152,6 +176,16 @@ img {
   height: 600px;
   background-color: var(--herobackground);
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1440px;
+  background-position: center;
+  margin: auto;
 }
 
 .hero .container {
@@ -172,6 +206,7 @@ img {
   background-color: #4d5ae5;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-weight: 500;
   font-size: 16px;
@@ -185,9 +220,8 @@ img {
   min-width: 169px;
   margin-left: auto;
   margin-right: auto;
-  height: 56px;
-  border: none;
 }
+
 .hero-button:hover,
 .hero-button:active,
 .hero-button:focus {
@@ -195,27 +229,26 @@ img {
 }
 .advantages-section {
   padding: 120px 0;
-  display: flex;
 }
 .advantages-section .card-set {
-  display: flex;
-  flex-wrap: wrap;
   gap: 24px;
 }
 
 .advantages-section .card {
   width: calc((100% - 3 * 24px) / 4);
-}
-.advantages-section .card_subtitle {
-  font-weight: 400;
+  align-items: center;
 }
 
-.card {
-display: inline-flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0;
+.advantages_icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
+
 .card_title {
   font-size: 20px;
   font-weight: 500;
@@ -229,10 +262,10 @@ padding: 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--textcolor);
+  font-weight: 400;
 }
 .section-header {
   font-size: 36px;
-
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -243,10 +276,12 @@ padding: 0;
 .section-doing {
   padding-bottom: 120px;
 }
-
-.section-doing .card-set {
+.card-set {
   display: flex;
   flex-wrap: wrap;
+}
+
+.section-doing .card-set {
   gap: 24px;
 }
 .section-doing .card {
@@ -258,10 +293,7 @@ padding: 0;
   padding: 120px 0;
 }
 .team-section .card-set {
-  display: flex;
-  flex-wrap: wrap;
   gap: 24px;
-  flex-shrink: 0;
 }
 .team-section .card {
   background-color: #ffffff;
@@ -269,12 +301,86 @@ padding: 0;
   border-radius: 0 0 4px 4px;
   text-align: center;
   align-items: center;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-section .card-text {
   padding: 32px 0px;
+  justify-content: center;
 }
 .team-section .card_title {
   margin-bottom: 8px;
+  
+}
+
+.team-section .card_subtitle {
+  margin-bottom: 8px;
+}
+.team-section .card_soc-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.team-section .card_soc-link {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  padding: 12px;
+  border-radius: 50%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-section .card_soc-link:hover,
+.team-section .card_soc-link:focus {
+  background-color: #404bbf;
+}
+.team-section .icon {
+  fill: #f4f4fd;
+}
+
+.customer-section {
+  padding: 120px 0px;
+}
+.customer-section .icon {
+  fill: #8e8f99;
+}
+
+.customer-section .card-set {
+  gap: 24px;
+}
+.customer-section .card {
+  width: calc((100% - 5 * 24px) / 6);
+}
+.customer-section .card {
+  height: 88px;
+}
+.customer_link {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  color: #404bbf;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #8e8f99;
+}
+.customer-section .icon {
+  fill: currentColor;
+}
+.customer-section .icon:hover,
+.customer-section .icon:focus {
+  fill: currentColor;
+}
+.customer-section .customer_link:hover,
+.customer-section .customer_link:focus {
+  border: 1px solid #404bbf;
+  color: #404bbf;
 }
 .footer {
   background-color: var(--footerbackground);
